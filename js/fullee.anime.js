@@ -17,7 +17,7 @@ var fulleeAnime = {
             easing: 'easeOutCubic',
         },
     },
-    slide: {
+    slideRight: {
         template: '<div class="slide"></div>',
         before: {
             targets: '.slide',
@@ -28,6 +28,21 @@ var fulleeAnime = {
         after: {
             targets: '.slide',
             translateX: ['0%', '100%'],
+            duration: 500,
+            easing: 'easeInCubic',
+        },
+    },
+    slideLeft: {
+        template: '<div class="slide slide--pink"></div>',
+        before: {
+            targets: '.slide',
+            translateX: ['100%', '0%'],
+            duration: 500,
+            easing: 'easeInCubic',
+        },
+        after: {
+            targets: '.slide',
+            translateX: ['0%', '-100%'],
             duration: 500,
             easing: 'easeInCubic',
         },

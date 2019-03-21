@@ -202,11 +202,11 @@ var methods = {
             // KVからの遷移
             this.animate.type = 'default'
         } else if (currentIndex == 1) {
-            // KVからの遷移
             this.animate.type = 'wave'
+        } else if (currentIndex == 2) {
+            this.animate.type = 'slideRight'
         } else {
-            // その他の遷移
-            this.animate.type = 'slide'
+            this.animate.type = 'slideLeft'
         }
     },
 

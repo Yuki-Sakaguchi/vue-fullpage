@@ -118,6 +118,10 @@ body {
     background-color: #559ab7;
 }
 
+.slide--pink {
+    background-color: pink;
+}
+
 .wave {
     position: absolute;
     top: 0;
