@@ -48,7 +48,17 @@ var fulleeAnime = {
         },
     },
     wave: {
-        template: '<canvas id="sineCanvas" class="wave"></canvas>',
+        template: '<canvas id="sineCanvas" class="wave"></canvas>' + 
+                  '<p class="pickup">' + 
+                    '<span>P</span>' +
+                    '<span>I</span>' +
+                    '<span>C</span>' +
+                    '<span>K</span>' +
+                    '<span> </span>' +
+                    '<span>U</span>' +
+                    '<span>P</span>' +
+                  '</p>'
+        ,
         before: {
             targets: '.wave',
             translateY: ['100%', '0%'],
@@ -154,6 +164,18 @@ var fulleeAnime = {
                     context.lineTo(width - i, height - (unit*y+xAxis));
                 }
             }
+
+            $('.pickup span').each(function (i, e) {
+                var addDelay = 20 * i;
+                anime({
+                    targets: e,
+                    opacity: [0, 1, 0],
+                    translateY: [0, -30, 0],
+                    easing: 'easeOutCubic',
+                    duration: 1400,
+                    delay: 750 + addDelay,
+                })
+            })
 
             init();
         },
