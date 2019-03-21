@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Fullpage</title>
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="css/fullee.css">
+    </head>
+    <body>
+        
+        <!-- アプリケーション -->
+        <div id="fullee" class="fullee">
+            <!-- コンテンツ -->
+            <div class="scene-section">
+                <div class="scene" v-bind:class="{ 'active': currentIndex == 0 }">SCENE1</div>
+                <div class="scene" v-bind:class="{ 'active': currentIndex == 1 }">SCENE2</div>
+                <div class="scene" v-bind:class="{ 'active': currentIndex == 2 }">SCENE3</div>
+                <div class="scene" v-bind:class="{ 'active': currentIndex == 3 }">SCENE4</div>
+                <div class="scene" v-bind:class="{ 'active': currentIndex == 4 }">SCENE5</div>
+            </div>
+            <!-- グローバルのナビ -->
+            <div id="nav" class="nav">
+                <ul class="timeline">
+                    <li class="timeline__item"><a @click="goToScene(0)">1</a></li>
+                    <li class="timeline__item"><a @click="goToScene(1)">2</a></li>
+                    <li class="timeline__item"><a @click="goToScene(2)">3</a></li>
+                    <li class="timeline__item"><a @click="goToScene(3)">4</a></li>
+                    <li class="timeline__item"><a @click="goToScene(4)">5</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- アニメーション -->
+        <div id="anime" class="anime"></div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+        <script src="js/plugins/anime.min.js"></script>
+        <script src="js/plugins/vue.min.js"></script>
+        <script src="js/fullee.anime.js"></script>
+        <script src="js/fullee.js"></script>
+    </body>
+</html>
